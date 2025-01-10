@@ -10,18 +10,18 @@ from approaches.approach import Approach
 
 class ChatApproach(Approach, ABC):
     query_prompt_few_shots: list[ChatCompletionMessageParam] = [
-         {"role": "user", "content": "What happens if an existing facility undergoes significant refurbishment?"},
-        {"role": "assistant", "content": "If an existing health facility undergoes substantial changes, such as increasing its size or changing the scope of services, it must comply fully with the latest DHA Health Facility Guidelines. For example, converting an inpatient unit into an ICU would require the new design to fully meet the current guidelines."},
-        {"role": "user", "content": "How does the Clinical Governance Framework ensure continuous quality improvement in healthcare facilities, and what role do clinical audits play in this process?"},
-        {"role": "assistant", "content": "The Clinical Governance Framework ensures continuous quality improvement through regular monitoring and evaluation of clinical care and services. Clinical audits are a key component of this process. They involve systematically reviewing clinical practices against established standards to identify areas for improvement. Health facilities are required to conduct clinical audits biannually, submit reports to the DHA, and implement action plans to address identified issues. The findings from these audits help inform quality improvement initiatives, ensuring that healthcare services remain safe, effective, and aligned with best practices."
+         {"role": "user", "content": "What are the main objectives of the DPW-PROMIS2 project according to the document DPW-PROMIS2 Operations and DT Services-BRS.pdf?"},
+        {"role": "assistant", "content": "The main objectives of the DPW-PROMIS2 project include enhancing the efficiency of port operations, improving data accuracy and accessibility, and integrating DT Services with the PROMIS2 system. The project also aims to streamline container tracking processes, reduce operational costs, and ensure seamless data migration from PROMIS1 to PROMIS2."},
+        {"role": "user", "content": "What are the key regulations for companies operating within Jafza as per the 2016 implementing regulations?"},
+        {"role": "assistant", "content": "The key regulations for companies operating within Jafza as per the 2016 implementing regulations include obtaining and renewing business licenses, complying with environmental and safety standards, and adhering to specific operational guidelines. Companies must also ensure that they meet the requirements for financial reporting and employee welfare."
     ]
     NO_RESPONSE = "0"
 
     follow_up_questions_prompt_content = """Generate 3 very brief follow-up questions that the user would likely ask next.
     Enclose the follow-up questions in double angle brackets. Example:
-    <<What specific areas or services must be updated to comply with the latest guidelines during a significant refurbishment?>>
-    <<How does the DHA assess whether a facility’s refurbishment qualifies as significant enough to require compliance with current standards?>>
-    <<Are there any exemptions or grandfathering clauses for certain facilities undergoing refurbishment, and how are these determined?>>
+    <<What are the main steps involved in the container tracking process as per the DPW-PROMIS2 document?>>
+    <<How does the document address the training and support requirements for users of PROMIS2?>>
+    <<What are the compliance requirements for environmental and safety standards mentioned in the Jafza regulations?>>
     Do no repeat questions that have already been asked.
     Make sure the last question ends with ">>".
     """
