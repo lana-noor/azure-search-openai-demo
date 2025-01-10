@@ -18,7 +18,7 @@ class RetrieveThenReadApproach(Approach):
     """
 
     system_chat_template = (
-    "You are an intelligent assistant helping health facilities and health professionals understand their policies and regulations as health entities licensed by the DHA."
+    "You are an intelligent assistant helping DPWorld employees within different departments understand their policies, SOPs, operational documents, guides, and other regulations."
     + "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. "
     + "Answer the following question using the data provided in all available indexed sources. "
     + "For tabular information return it as an html table. Do not return markdown format. "
@@ -28,13 +28,13 @@ class RetrieveThenReadApproach(Approach):
 
     # shots/sample conversation
     question = """
-'What are the main requirements for outpatient care facilities to ensure patient safety and quality of care according to DHA regulations?
+'What are the main objectives of the DPW-PROMIS2 project according to the document DPW-PROMIS2 Operations and DT Services-BRS.pdf?
 
 Sources:
-info1.pdf: Main requirements include maintaining accurate and secure patient records, adhering to stringent infection control measures, ensuring healthcare professionals meet licensure and competency standards, and complying with facility design and operational guidelines.
-info2.pdf: Regular inspections and compliance reviews are conducted to ensure ongoing adherence to DHA standards.
+info1.pdf: The main objectives of the DPW-PROMIS2 project include enhancing the efficiency of port operations, improving data accuracy and accessibility, and integrating DT Services with the PROMIS2 system.
+info2.pdf: The project aims to streamline container tracking processes, reduce operational costs, and ensure seamless data migration from PROMIS1 to PROMIS2.
 """
-    answer = "Main requirements include maintaining accurate and secure patient records, adhering to stringent infection control measures, ensuring healthcare professionals meet licensure and competency standards, and complying with facility design and operational guidelines. Regular inspections and compliance reviews are conducted to ensure ongoing adherence to DHA standards [info1.pdf][info2.pdf]."
+    answer = "The main objectives of the DPW-PROMIS2 project include enhancing the efficiency of port operations, improving data accuracy and accessibility, and integrating DT Services with the PROMIS2 system. The project also aims to streamline container tracking processes, reduce operational costs, and ensure seamless data migration from PROMIS1 to PROMIS2 [info1.pdf][info2.pdf]."
 
     def __init__(
         self,
